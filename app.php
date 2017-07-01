@@ -11,6 +11,7 @@ foreach ($ducks as $duckBreed) {
     $className = "App\Classes\\{$duckBreed}";
     $duck = new $className;
     $duck->display();
-    $duck->swim();
     $duck->quack();
+    $duck->swim();
+    $duck->fly();
 }

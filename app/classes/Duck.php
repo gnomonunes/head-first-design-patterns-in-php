@@ -20,6 +20,11 @@ abstract class Duck
 
     public function swim()
     {
-        print "{$this->breed}: Swimming...\n";
+        print "{$this->breed}: I'm swimming!\n";
+    }
+
+    public function fly()
+    {
+        print "{$this->breed}: I'm flying!\n";
     }
 }
