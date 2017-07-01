@@ -15,10 +15,18 @@ class RubberDuck extends Duck
     }
 
     /**
-     * Rubber duck doesn't quack like regular ducks, so it overrides quack().
+     * Rubber ducks doesn't quack like regular ducks, so it overrides quack().
      */
     public function quack()
     {
         print "{$this->breed}: Squeak!\n";
+    }
+
+    /**
+     * Rubber ducks can't fly, so it overrides fly().
+     */
+    public function fly()
+    {
+        print "{$this->breed}: I can't fly :-(\n";
     }
 }
