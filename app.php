@@ -8,10 +8,13 @@ $ducks = array(
 );
 
 foreach ($ducks as $duckBreed) {
-    $className = "App\Classes\\{$duckBreed}";
-    $duck = new $className;
+    $className = "App\Classes\Entities\\{$duckBreed}";
+
+    $duck = new $className();
     $duck->display();
-    $duck->quack();
+    $duck->performQuack();
+    $duck->performFly();
     $duck->swim();
-    $duck->fly();
+
+    print "--------\n";
 }
