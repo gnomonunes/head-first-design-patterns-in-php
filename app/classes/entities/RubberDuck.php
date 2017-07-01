@@ -1,9 +1,19 @@
 <?php
 
-namespace App\Classes;
+namespace App\Classes\Entities;
+
+use \App\Classes\Behaviors\QuackSqueak;
+use \App\Classes\Behaviors\FlyNoWay;
 
 class RubberDuck extends Duck
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->quackBehavior = new QuackSqueak();
+        $this->flyBehavior = new FlyNoWay();
+    }
+
     protected function setBreed()
     {
         $this->breed = "Rubber Duck";
@@ -20,13 +30,5 @@ class RubberDuck extends Duck
     public function quack()
     {
         print "{$this->breed}: Squeak!\n";
-    }
-
-    /**
-     * Rubber ducks can't fly, so it overrides fly().
-     */
-    public function fly()
-    {
-        print "{$this->breed}: I can't fly :-(\n";
     }
 }
