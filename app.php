@@ -1,7 +1,16 @@
 <?php
 require_once 'autoloader.php';
 
-$mallardDuck = new App\Classes\MallardDuck();
-$mallardDuck->display();
-$mallardDuck->swim();
-$mallardDuck->quack();
+$ducks = array(
+    'MallardDuck',
+    'RedheadDuck',
+    'RubberDuck'
+);
+
+foreach ($ducks as $duckBreed) {
+    $className = "App\Classes\\{$duckBreed}";
+    $duck = new $className;
+    $duck->display();
+    $duck->swim();
+    $duck->quack();
+}
