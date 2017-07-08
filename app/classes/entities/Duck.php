@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace App\Classes\Entities;
 
+use \App\Interfaces\Behaviors\FlyBehavior;
+use \App\Interfaces\Behaviors\QuackBehavior;
+
 abstract class Duck
 {
     protected $breed;
@@ -14,6 +17,16 @@ abstract class Duck
     public function __construct()
     {
         $this->setBreed();
+    }
+
+    public function setFlyBehavior(FlyBehavior $flyBehavior)
+    {
+        $this->flyBehavior = $flyBehavior;
+    }
+
+    public function setQuackBehavior(QuackBehavior $quackBehavior)
+    {
+        $this->quackBehavior = $quackBehavior;
     }
 
     public function swim()
