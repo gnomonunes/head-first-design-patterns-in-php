@@ -20,11 +20,6 @@ class RubberDuck extends Duck
         $this->breed = "Rubber Duck";
     }
 
-    public function display()
-    {
-        print "This is a {$this->breed}\n";
-    }
-
     /**
      * Rubber ducks doesn't quack like regular ducks, so it overrides quack().
      */

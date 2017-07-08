@@ -19,9 +19,4 @@ class ModelDuck extends Duck
     {
         $this->breed = "Model Duck";
     }
-
-    public function display()
-    {
-        print "This is a {$this->breed}\n";
-    }
 }

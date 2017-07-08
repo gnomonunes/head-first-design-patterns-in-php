@@ -12,7 +12,6 @@ abstract class Duck
     protected $flyBehavior;
     protected $quackBehavior;
     abstract protected function setBreed();
-    abstract protected function display();
 
     public function __construct()
     {
@@ -27,6 +26,11 @@ abstract class Duck
     public function setQuackBehavior(QuackBehavior $quackBehavior)
     {
         $this->quackBehavior = $quackBehavior;
+    }
+
+    public function display()
+    {
+        print "This is a {$this->breed}\n";
     }
 
     public function swim()
