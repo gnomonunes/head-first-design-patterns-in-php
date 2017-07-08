@@ -1,6 +1,6 @@
 # Head First Design Patterns in PHP
 
-This is a work-in-progress PHP version of the code examples from the book [Head First Design Patterns](http://www.headfirstlabs.com/books/hfdp/), originally.
+This is a work-in-progress PHP version of the code examples from the book [Head First Design Patterns](http://www.headfirstlabs.com/books/hfdp/).
 
 The book is based on Java, but I decided to implement the examples in PHP for study purposes.
 
