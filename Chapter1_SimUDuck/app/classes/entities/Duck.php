@@ -8,15 +8,8 @@ use \App\Interfaces\Behaviors\QuackBehavior;
 
 abstract class Duck
 {
-    protected $breed;
     protected $flyBehavior;
     protected $quackBehavior;
-    abstract protected function setBreed();
-
-    public function __construct()
-    {
-        $this->setBreed();
-    }
 
     public function setFlyBehavior(FlyBehavior $flyBehavior)
     {
@@ -30,23 +23,21 @@ abstract class Duck
 
     public function display()
     {
-        print "This is a {$this->breed}\n";
+        print "I'm a duck!\n";
     }
 
     public function swim()
     {
-        print "{$this->breed}: I'm swimming!\n";
+        print "I'm swimming!\n";
     }
 
     public function performFly()
     {
-        print "{$this->breed}: ";
         $this->flyBehavior->fly();
     }
 
     public function performQuack()
     {
-        print "{$this->breed}: ";
         $this->quackBehavior->quack();
     }
 }

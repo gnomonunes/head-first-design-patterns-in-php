@@ -21,6 +21,8 @@ foreach ($ducks as $duckBreed) {
         $duck->setFlyBehavior(new FlyRocketPowered());
     }
 
+    print "$duckBreed:\n";
+
     $duck->display();
     $duck->performQuack();
     $duck->performFly();

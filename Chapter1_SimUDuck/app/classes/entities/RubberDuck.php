@@ -10,14 +10,8 @@ class RubberDuck extends Duck
 {
     public function __construct()
     {
-        parent::__construct();
         $this->quackBehavior = new QuackSqueak();
         $this->flyBehavior = new FlyNoWay();
-    }
-
-    protected function setBreed()
-    {
-        $this->breed = "Rubber Duck";
     }
 
     /**
